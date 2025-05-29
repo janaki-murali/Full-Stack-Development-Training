@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+Fill in the missing addEventListener code to make
+  the box change to a random color on click.
+  <div id="colorBox" style="width: 200px; height: 200px; border: 2px solid black;"></div>
+
+  <script>
+    const box = document.getElementById("colorBox");
+
+    // Function to generate a random color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Add your event listener here
+    box.addEventListener("click", function() {
+     box.style.backgroundColor = getRandomColor(); 
+    });
+
+  </script>
+
+</body>
+</html>
